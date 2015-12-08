@@ -7,16 +7,17 @@
       "email": "vladimir@drizheruk.com.ua"
     }
   ],
-  "require": {
-    "ext-redis": "*",
-    "snc/redis-bundle": "1.1.*",
-    "akeneo/batch-bundle": "0.4.2"
-  },
   "autoload": {
     "psr-4": {
       "Oro\\Bundle\\RedisConfigBundle\\": ""
     }
   },
-  "minimum-stability": "dev"
+  "require": {
+    "ext-redis": "*",
+    "snc/redis-bundle": "1.1.*",
+    "akeneo/batch-bundle": "0.4.2"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
 
