@@ -9,14 +9,16 @@
   ],
   "homepage": "https://github.com/vdrizheruk/oro-redis-config.git",
   "license": "OSL-3.0",
-  "keywords": ["OroPlatform", "Redis"],
-  "target-dir": "src/Oro",
+  "keywords": [
+    "OroPlatform",
+    "Redis"
+  ],
   "autoload": {
     "psr-0": {
+      "Oro\\Component": "src/",
       "Oro\\Bundle": "src/"
     }
   },
-
   "require": {
     "ext-redis": "*",
     "snc/redis-bundle": "1.1.*",
