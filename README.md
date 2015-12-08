@@ -1,0 +1,1 @@
+# oro-redis-config
