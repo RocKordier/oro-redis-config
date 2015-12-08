@@ -16,6 +16,7 @@
     "psr-4": {
       "Oro\\Bundle\\RedisConfigBundle\\": ""
     }
-  }
+  },
+  "minimum-stability": "dev"
 }
 
