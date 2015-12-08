@@ -1,0 +1,3 @@
+bundles:
+    - { name: Snc\RedisBundle\SncRedisBundle, priority: -254 }
+    - { name: Oro\Bundle\RedisBundle\OroRedisBundle, priority: -253 }

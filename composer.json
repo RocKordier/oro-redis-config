@@ -1,0 +1,21 @@
+{
+  "name": "vdrizheruk/oro-redis-config",
+  "description": "OroRedisConfigBundle",
+  "authors": [
+    {
+      "name": "Vladimir Drizheruk",
+      "email": "vladimir@drizheruk.com.ua"
+    }
+  ],
+  "require": {
+    "ext-redis": "*",
+    "snc/redis-bundle": "1.1.*",
+    "akeneo/batch-bundle": "0.4.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Oro\\Bundle\\RedisConfigBundle\\": ""
+    }
+  }
+}
+
