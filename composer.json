@@ -22,7 +22,7 @@
   },
   "autoload": {
     "psr-0": {
-      "Oro\\Bundle\\RedisConfigBundle": ""
+      "Oro\\Bundle": "vdrizheruk/oro-redis-config"
     }
   },
   "target-dir": "Oro/Bundle/RedisConfigBundle",
