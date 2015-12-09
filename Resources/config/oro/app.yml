@@ -45,7 +45,7 @@ snc_redis:
         session:
             type: phpredis
             alias: session
-            dsn: redis://%redis_password%@%redis_host%:%redis_port%/3
+            dsn: redis://%redis_dsn%/3
 #        monolog:
 #            type: phpredis
 #            alias: monolog
