@@ -1,5 +1,6 @@
 {
   "name": "vdrizheruk/oro-redis-config",
+  "type": "symfony-bundle",
   "description": "OroRedisConfigBundle",
   "authors": [
     {
@@ -22,10 +23,10 @@
   },
   "autoload": {
     "psr-0": {
-      "Oro\\Bundle": "vdrizheruk/oro-redis-config"
+      "Oro\\Bundle\\RedisConfigBundle": "src/"
     }
   },
-  "target-dir": "Oro/Bundle/RedisConfigBundle",
+  "target-dir": "src/Oro/Bundle/RedisConfigBundle",
   "config": {
     "bin-dir": "bin"
   },
