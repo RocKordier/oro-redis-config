@@ -35,15 +35,15 @@ swiftmailer:
 snc_redis:
     clients:
         default:
-            type: phpredis
+            type: predis
             alias: default
             dsn: %redis_dsn%/1
         doctrine:
-            type: phpredis
+            type: predis
             alias: doctrine
             dsn: %redis_dsn%/2
         session:
-            type: phpredis
+            type: predis
             alias: session
             dsn: redis://%redis_dsn%/3
 #        monolog:
@@ -54,7 +54,7 @@ snc_redis:
 #            options:
 #                connection_persistent: true
         swiftmailer:
-            type: phpredis
+            type: predis
             alias: swiftmailer
             dsn: %redis_dsn%/5
             logging: %kernel.debug%
