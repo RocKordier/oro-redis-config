@@ -12,6 +12,7 @@
   "keywords": [
     "Oro",
     "OroPlatform",
+    "OroCrm",
     "Redis"
   ],
   "require": {
