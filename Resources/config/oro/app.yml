@@ -2,79 +2,49 @@ framework:
     annotations:
         cache: oro.cache.annotations
 
-doctrine:
-    orm:
-        metadata_cache_driver: redis
-        query_cache_driver: redis
-        result_cache_driver: redis
+#doctrine:
+#    orm:
+#        metadata_cache_driver: redis
+#        query_cache_driver: redis
+#        result_cache_driver: redis
+
+snc_redis:
+    clients:  # configure phpredis client
+        default:
+            type: phpredis
+            alias: default
+            dsn: %redis_dsn%/1
+        doctrine:
+            type: phpredis
+            alias: doctrine
+            dsn: %redis_dsn%%/2
+#        session:
+#            type: phpredis
+#            alias: session
+#            dsn: %redis_dsn%%/3
+    doctrine: # use Redis caching for Doctrine
+        metadata_cache:
+            client: doctrine
+            entity_manager: default
+            document_manager: default
+        result_cache:
+            client: doctrine
+            entity_manager: [default]
+        query_cache:
+            client: doctrine
+            entity_manager: default
+#    session:  # configure sessions
+#        client: session
+#        prefix: session
+#        use_as_default: true
 
 jms_serializer:
     metadata:
         cache: Metadata\Cache\DoctrineCacheAdapter
+
 
 #security:
 #    firewalls:
 #        wsse_secured:
 #            wsse:
 #                nonce_cache_service_id: oro.cache.wsse_nonces
-
-#monolog:
-#    handlers:
-#        main:
-#            type: service
-#            id: snc_redis.monolog.handler
-#            level: debug
-
-swiftmailer:
-    spool:
-        type: service
-        id: snc_redis.swiftmailer.spool
-    # spool:
-    #     type: redis
-
-snc_redis:
-    clients:
-        default:
-            type: predis
-            alias: default
-            dsn: %redis_dsn%/1
-        doctrine:
-            type: predis
-            alias: doctrine
-            dsn: %redis_dsn%/2
-#        session:
-#            type: predis
-#            alias: session
-#            dsn: redis://%redis_dsn%/3
-#        monolog:
-#            type: phpredis
-#            alias: monolog
-#            dsn: redis://%redis_host%/4
-#            logging: false
-#            options:
-#                connection_persistent: true
-        swiftmailer:
-            type: predis
-            alias: swiftmailer
-            dsn: %redis_dsn%/5
-            logging: %kernel.debug%
-    doctrine:
-        metadata_cache:
-            client: doctrine
-            entity_manager: [default, config, search]
-        result_cache:
-            client: doctrine
-            entity_manager: [default, config, search]
-        query_cache:
-            client: doctrine
-            entity_manager: [default, config, search]
-#    session:
-#        client: session
-#        prefix: session
-#        use_as_default: true
-#    monolog:
-#        client: monolog
-#        key: monolog
-    swiftmailer:
-        client: default
-        key: swiftmailer
