@@ -4,6 +4,4 @@
 ### requires php5-redis extension
 
 ### need to add to parameters.yml :
-redis_host: [host]
-redis_port: [6379]
-redis_password: [password]
+redis_dsn: "redis://%redis_password%@%redis_host%:%redis_port%"

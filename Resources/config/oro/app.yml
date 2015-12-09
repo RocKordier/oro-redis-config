@@ -37,11 +37,11 @@ snc_redis:
         default:
             type: phpredis
             alias: default
-            dsn: redis://%redis_password%@%redis_host%:%redis_port%/1
+            dsn: %redis_dsn%/1
         doctrine:
             type: phpredis
             alias: doctrine
-            dsn: redis://%redis_password%@%redis_host%:%redis_port%/2
+            dsn: %redis_dsn%/2
         session:
             type: phpredis
             alias: session
@@ -56,7 +56,7 @@ snc_redis:
         swiftmailer:
             type: phpredis
             alias: swiftmailer
-            dsn: redis://%redis_password%@%redis_host%:%redis_port%/5
+            dsn: %redis_dsn%/5
             logging: %kernel.debug%
     doctrine:
         metadata_cache:
