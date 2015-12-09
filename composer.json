@@ -29,10 +29,5 @@
     "bin-dir": "bin"
   },
   "minimum-stability": "dev",
-  "prefer-stable": true,
-  "extra": {
-    "branch-alias": {
-      "dev-master": "0.0.3"
-    }
-  }
+  "prefer-stable": true
 }
