@@ -8,22 +8,31 @@
     }
   ],
   "homepage": "https://github.com/vdrizheruk/oro-redis-config.git",
-  "license": "OSL-3.0",
+  "license": "MIT",
   "keywords": [
+    "Oro",
     "OroPlatform",
     "Redis"
   ],
-  "autoload": {
-    "psr-0": {
-      "Oro\\Component": "src/",
-      "Oro\\Bundle": "src/"
-    }
-  },
   "require": {
     "ext-redis": "*",
     "snc/redis-bundle": "1.1.*",
     "akeneo/batch-bundle": "0.4.2"
   },
+  "autoload": {
+    "psr-0": {
+      "Oro\\Bundle\\RedisConfigBundle": ""
+    }
+  },
+  "target-dir": "Oro/Bundle/RedisConfigBundle",
+  "config": {
+    "bin-dir": "bin"
+  },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.0.3"
+    }
+  }
 }
