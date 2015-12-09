@@ -42,10 +42,10 @@ snc_redis:
             type: predis
             alias: doctrine
             dsn: %redis_dsn%/2
-        session:
-            type: predis
-            alias: session
-            dsn: redis://%redis_dsn%/3
+#        session:
+#            type: predis
+#            alias: session
+#            dsn: redis://%redis_dsn%/3
 #        monolog:
 #            type: phpredis
 #            alias: monolog
@@ -68,10 +68,10 @@ snc_redis:
         query_cache:
             client: doctrine
             entity_manager: [default, config, search]
-    session:
-        client: session
-        prefix: session
-        use_as_default: true
+#    session:
+#        client: session
+#        prefix: session
+#        use_as_default: true
 #    monolog:
 #        client: monolog
 #        key: monolog
