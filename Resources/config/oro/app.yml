@@ -12,18 +12,18 @@ jms_serializer:
     metadata:
         cache: Metadata\Cache\DoctrineCacheAdapter
 
-security:
-    firewalls:
-        wsse_secured:
-            wsse:
-                nonce_cache_service_id: oro.cache.wsse_nonces
+#security:
+#    firewalls:
+#        wsse_secured:
+#            wsse:
+#                nonce_cache_service_id: oro.cache.wsse_nonces
 
-monolog:
-    handlers:
-        main:
-            type: service
-            id: snc_redis.monolog.handler
-            level: debug
+#monolog:
+#    handlers:
+#        main:
+#            type: service
+#            id: snc_redis.monolog.handler
+#            level: debug
 
 swiftmailer:
     spool:
@@ -46,13 +46,13 @@ snc_redis:
             type: phpredis
             alias: session
             dsn: redis://%redis_host%/3
-        monolog:
-            type: phpredis
-            alias: monolog
-            dsn: redis://%redis_host%/4
-            logging: false
-            options:
-                connection_persistent: true
+#        monolog:
+#            type: phpredis
+#            alias: monolog
+#            dsn: redis://%redis_host%/4
+#            logging: false
+#            options:
+#                connection_persistent: true
         swiftmailer:
             type: phpredis
             alias: swiftmailer
@@ -72,9 +72,9 @@ snc_redis:
         client: session
         prefix: session
         use_as_default: true
-    monolog:
-        client: monolog
-        key: monolog
-    swiftmailer:
-        client: default
-        key: swiftmailer
+#    monolog:
+#        client: monolog
+#        key: monolog
+#    swiftmailer:
+#        client: default
+#        key: swiftmailer
