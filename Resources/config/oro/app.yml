@@ -4,24 +4,23 @@ framework:
 
 #doctrine:
 #    orm:
-#        metadata_cache_driver: redis
 #        query_cache_driver: redis
 #        result_cache_driver: redis
 
 snc_redis:
-    clients:  # configure phpredis client
+    clients:  # configure phpredis clients
         default:
-            type: phpredis
+            type: predis
             alias: default
             dsn: %redis_dsn%/1
         doctrine:
-            type: phpredis
+            type: predis
             alias: doctrine
             dsn: %redis_dsn%%/2
-#        session:
-#            type: phpredis
-#            alias: session
-#            dsn: %redis_dsn%%/3
+        session:
+            type: predis
+            alias: session
+            dsn: %redis_dsn%/3
     doctrine: # use Redis caching for Doctrine
         metadata_cache:
             client: doctrine
@@ -33,10 +32,10 @@ snc_redis:
         query_cache:
             client: doctrine
             entity_manager: default
-#    session:  # configure sessions
-#        client: session
-#        prefix: session
-#        use_as_default: true
+    session:  # configure sessions
+        client: session
+        prefix: session
+        use_as_default: true
 
 jms_serializer:
     metadata:
