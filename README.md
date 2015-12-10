@@ -1,7 +1,6 @@
-# oro-redis-config
+# OroRedisConfigBundle
 
-
-### requires php5-redis extension
+Bundle for configure redis with oro-application 
 
 ### need to add to parameters.yml :
-redis_dsn: "redis://%redis_password%@%redis_host%:%redis_port%"
+redis_dsn: "redis://password@host:port"
