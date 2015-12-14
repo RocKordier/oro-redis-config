@@ -1,6 +1,10 @@
 # OroRedisConfigBundle
 
-Bundle for configure redis with oro-application 
+Configuration enhancements for the application, based on the OroPlatform that will enable usage of the Redis for caching
 
-### need to add to parameters.yml :
+
+### System configuration
+In parameters.yml need to add redis config section
+```
 redis_dsn: "redis://password@host:port"
+```
