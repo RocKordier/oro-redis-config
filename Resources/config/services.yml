@@ -28,3 +28,4 @@ services:
         parent: oro.cache.abstract
         calls:
             - [ setNamespace, [ 'oro_acl_annotations' ] ]
+
