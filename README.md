@@ -9,6 +9,11 @@ In Ubuntu Linux it can be installed via
     sudo apt-get install redis-server
 ```
 
+### Installation
+``` bash
+    composer require oro/redis-config 
+```
+
 ### Configuration
 In parameters.yml need to add redis config section
 ``` yaml
@@ -16,5 +21,3 @@ In parameters.yml need to add redis config section
 ```
 
 After this need to remove cache.
-
-Installation on existed application and on clean application - the same.
