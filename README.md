@@ -10,6 +10,7 @@ In Ubuntu Linux it can be installed via
 ```
 
 ### Installation
+From project root need to run
 ``` bash
     composer require oro/redis-config 
 ```
