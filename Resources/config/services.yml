@@ -5,6 +5,12 @@ services:
         calls:
             - [setRedis, [@snc_redis.default]]
 
+    oro.file_cache.abstract:
+        public: false
+        class: Snc\RedisBundle\Doctrine\Cache\RedisCache
+        calls:
+            - [setRedis, [@snc_redis.default]]
+
     oro.cache.wsse_nonces:
         public: false
         parent: oro.cache.abstract
@@ -16,16 +22,3 @@ services:
         parent: oro.cache.abstract
         calls:
             - [ setNamespace, [ "oro_annotations_cache" ] ]
-
-    oro_security.action_metadata_provider.cache:
-        public: false
-        parent: oro.cache.abstract
-        calls:
-            - [ setNamespace, [ 'oro_acl_actions' ] ]
-
-    oro_security.acl.annotation_provider.cache:
-        public: false
-        parent: oro.cache.abstract
-        calls:
-            - [ setNamespace, [ 'oro_acl_annotations' ] ]
-
