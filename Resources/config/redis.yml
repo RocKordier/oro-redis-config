@@ -2,11 +2,6 @@ framework:
     annotations:
         cache: oro.cache.annotations
 
-#doctrine:
-#    orm:
-#        query_cache_driver: redis
-#        result_cache_driver: redis
-
 snc_redis:
     clients:  # configure phpredis clients
         default:
@@ -40,10 +35,3 @@ snc_redis:
 jms_serializer:
     metadata:
         cache: Metadata\Cache\DoctrineCacheAdapter
-
-
-#security:
-#    firewalls:
-#        wsse_secured:
-#            wsse:
-#                nonce_cache_service_id: oro.cache.wsse_nonces
